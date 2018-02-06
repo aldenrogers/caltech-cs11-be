@@ -1,0 +1,11 @@
+
+pwd:     file format elf64-x86-64
+
+Contents of section .rodata:
+ 400740 01000200 00000000 84f483e7 b8cba2cf  ................
+ 400750 bfd3b6e9 8ffa94cb b3dcaef1 83e690f5  ................
+ 400760 87f491e3 9e000045 6e746572 20746865  .......Enter the
+ 400770 20706173 73776f72 643a2000 50617373   password: .Pass
+ 400780 776f7264 20697320 636f7272 65637421  word is correct!
+ 400790 00506173 73776f72 64206973 20696e63  .Password is inc
+ 4007a0 6f727265 63742e00                    orrect..        
