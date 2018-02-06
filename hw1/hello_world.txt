@@ -1,0 +1,4 @@
+6b7 performs the puts call (via 570) that prints "Hello world!"
+6cd calls printf (via 580) to print the number of arguments,
+6d9 performs another puts call to print "Arguments:"
+706 prints the arguments themselves, within the loop spanning 6de-715
