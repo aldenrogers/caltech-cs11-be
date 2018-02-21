@@ -1,0 +1,9 @@
+The validate_user_password function only allocates 256 bytes for input
+and doesn't ensure the input is within this size. Therefore we can use
+a line of more than 256 bytes to overflow the buffer. In particular, a
+line of 256 garbage bytes and 16 more bytes can overwrite the base and
+return pointers. I provide the same base pointer 0x7fffffffe7a0 so the
+function continues without crashing and write 0x400798 over the return
+pointer so that when the function tries to return it instead goes into
+spawn_shell. We can call cat buffer_input - | ./buffer_overflow to use
+the shell.
