@@ -1,0 +1,9 @@
+The code only checks for indices greater than the length of the array,
+so we can input negative indices to read values at addresses below the
+array in memory, including the password. In the file indexing_input is
+an input that will read the relevant memory. We start at -64, since it
+will be multiplied by 4 (integer size) so that we read 256 bytes lower
+in memory: -0xfa0 - 0x100 = -0x10a0, where the password is stored. The
+password may be more than four bytes, so we read several (more numbers
+of input could be added if the password is still longer) indices, each
+of which gives us four bytes of the password (in convenient hex).
